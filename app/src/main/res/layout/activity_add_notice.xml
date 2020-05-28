@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="#fff"
+    app:cardCornerRadius="20dp"
+    tools:context=".AddNotice"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/aldrich"
+                android:text="Post"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#000" />
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/text"
+                android:layout_marginTop="10dp"
+                android:background="#80DAD8D8"
+                android:elevation="8dp" />
+
+            <Button
+                android:id="@+id/button_choose_image"
+                android:layout_width="130dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/text_input_field"
+                android:layout_marginTop="10dp"
+
+                android:background="@drawable/headerbackground"
+                android:drawableLeft="@drawable/choose_image"
+
+                android:padding="5dp"
+                android:text="Image"
+                android:textColor="#fff" />
+
+            <EditText
+
+                android:id="@+id/text_input_field"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progress_bar"
+                android:background="#1655F5F5"
+                android:hint="Text Field(Adding image is not mandatory)\n" />
+
+
+            <Button
+                android:id="@+id/post_button"
+                android:layout_width="130dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/text_input_field"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/headerbackground"
+                android:drawableLeft="@drawable/post"
+                android:padding="5dp"
+                android:text="post"
+                android:textColor="#fff"
+
+                />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_view"
+                android:layout_marginBottom="16dp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</androidx.cardview.widget.CardView>

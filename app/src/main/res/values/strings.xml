@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CSE10</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="notice">In order to upload a post first goto the "Notice" option.
+        Then click on the floating red button. While posting a post with image
+        uploading the image can take some time. The progress bar will show the
+        amount of work done while uploading.
+    </string>
+    <string name="book_link">The link copied from google drive app and desktop is compatible.
+    The link should be allowed sharing in the Google Drive. Or Else it wont work.
+    </string>
+
+</resources>

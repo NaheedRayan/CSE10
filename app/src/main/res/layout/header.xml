@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:background="@drawable/headerbackground"
+    android:gravity="bottom"
+    android:padding="20dp">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CSE 10"
+        android:textSize="25sp"
+        app:fontFamily="@font/aldrich"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#fff"/>
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red_Umbrella_Corp"
+        android:textSize="14sp"
+        app:fontFamily="@font/aldrich"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#fff"/>
+
+
+</LinearLayout>
