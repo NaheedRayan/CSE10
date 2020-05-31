@@ -96,6 +96,8 @@ public class CGPA_Calculator extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //for validating the field
+                validate();
                 //for scrolling back to top
                 ScrollView scrollView = findViewById(R.id.scroll_view_cgpa);
                 scrollView.fullScroll(ScrollView.FOCUS_UP);
@@ -113,9 +115,84 @@ public class CGPA_Calculator extends AppCompatActivity {
                 ScrollView scrollView = findViewById(R.id.scroll_view_cgpa);
                 scrollView.fullScroll(ScrollView.FOCUS_UP);
 
+                //for reseting
+                resetText();
                 textView_gpa.setText("0.0");
             }
         });
+    }
+
+    private void resetText() {
+        grade1.getEditText().setText("");
+        grade2.getEditText().setText("");
+        grade3.getEditText().setText("");
+        grade4.getEditText().setText("");
+        grade5.getEditText().setText("");
+        grade6.getEditText().setText("");
+        grade7.getEditText().setText("");
+        grade8.getEditText().setText("");
+        grade9.getEditText().setText("");
+        grade10.getEditText().setText("");
+
+        credit1.getEditText().setText("");
+        credit2.getEditText().setText("");
+        credit3.getEditText().setText("");
+        credit4.getEditText().setText("");
+        credit5.getEditText().setText("");
+        credit6.getEditText().setText("");
+        credit7.getEditText().setText("");
+        credit8.getEditText().setText("");
+        credit9.getEditText().setText("");
+        credit10.getEditText().setText("");
+
+    }
+
+    private void validate() {
+
+        //setting it with zero for handling the exception
+        if (grade1.getEditText().getText().toString().trim().equals(""))
+            grade1.getEditText().setText("0");
+        if (grade2.getEditText().getText().toString().trim().equals(""))
+            grade2.getEditText().setText("0");
+        if (grade3.getEditText().getText().toString().trim().equals(""))
+            grade3.getEditText().setText("0");
+        if (grade4.getEditText().getText().toString().trim().equals(""))
+            grade4.getEditText().setText("0");
+        if (grade5.getEditText().getText().toString().trim().equals(""))
+            grade5.getEditText().setText("0");
+        if (grade6.getEditText().getText().toString().trim().equals(""))
+            grade6.getEditText().setText("0");
+        if (grade7.getEditText().getText().toString().trim().equals(""))
+            grade7.getEditText().setText("0");
+        if (grade8.getEditText().getText().toString().trim().equals(""))
+            grade8.getEditText().setText("0");
+        if (grade9.getEditText().getText().toString().trim().equals(""))
+            grade9.getEditText().setText("0");
+        if (grade10.getEditText().getText().toString().trim().equals(""))
+            grade10.getEditText().setText("0");
+
+        if (credit1.getEditText().getText().toString().trim().equals(""))
+            credit1.getEditText().setText("0");
+        if (credit2.getEditText().getText().toString().trim().equals(""))
+            credit2.getEditText().setText("0");
+        if (credit3.getEditText().getText().toString().trim().equals(""))
+            credit3.getEditText().setText("0");
+        if (credit4.getEditText().getText().toString().trim().equals(""))
+            credit4.getEditText().setText("0");
+        if (credit5.getEditText().getText().toString().trim().equals(""))
+            credit5.getEditText().setText("0");
+        if (credit6.getEditText().getText().toString().trim().equals(""))
+            credit6.getEditText().setText("0");
+        if (credit7.getEditText().getText().toString().trim().equals(""))
+            credit7.getEditText().setText("0");
+        if (credit8.getEditText().getText().toString().trim().equals(""))
+            credit8.getEditText().setText("0");
+        if (credit9.getEditText().getText().toString().trim().equals(""))
+            credit9.getEditText().setText("0");
+        if (credit10.getEditText().getText().toString().trim().equals(""))
+            credit10.getEditText().setText("0");
+
+
     }
 
     private void calculateResult() {
@@ -149,18 +226,18 @@ public class CGPA_Calculator extends AppCompatActivity {
             sum += list[i];
         }
 
-        float answer = (float) (sum/totalCredit) ;
+        float answer = (float) (sum / totalCredit);
 
         float formated_answer = Float.parseFloat(String.format("%.3f", answer));
 
-        if(formated_answer > 4.0){
+        if (formated_answer > 4.0) {
             Toast.makeText(this, "GPA cant be more than 4.0", Toast.LENGTH_SHORT).show();
             return;
         }
 
 
         //for value animation
-        final ValueAnimator valueAnimator = ValueAnimator.ofFloat(0.0f , formated_answer);
+        final ValueAnimator valueAnimator = ValueAnimator.ofFloat(0.0f, formated_answer);
         valueAnimator.setDuration(2000);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override

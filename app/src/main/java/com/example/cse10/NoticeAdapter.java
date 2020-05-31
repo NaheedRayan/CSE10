@@ -1,6 +1,10 @@
 package com.example.cse10;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
+import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -9,16 +13,26 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.squareup.picasso.Picasso;
 
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.NetworkPolicy;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
+
+import java.net.URL;
+import java.util.Arrays;
 import java.util.List;
 
-import uk.co.senab.photoview.PhotoViewAttacher;
+
 
 public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.NoticeViewHolder> {
 
@@ -41,31 +55,70 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.NoticeView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NoticeViewHolder holder, int position) {
-        Notice uploadCurrent = mUploads.get(position);
+    public void onBindViewHolder(@NonNull final NoticeViewHolder holder, int position) {
+        final Notice uploadCurrent = mUploads.get(position);
         holder.textViewName.setText(uploadCurrent.getUsername());
         holder.textViewID.setText(uploadCurrent.getId());
         holder.textViewTimestamp.setText(uploadCurrent.getTimestamp());
         holder.textViewText.setText(uploadCurrent.getTextfield());
+
 
         //if there is no image
         if (uploadCurrent.getImageurl().trim().equals("")) {
             //Toast.makeText(mContext, "gone", Toast.LENGTH_SHORT).show();
             holder.imageView.setVisibility(View.GONE);
         } else {
+            holder.imageView.setVisibility(View.VISIBLE);
             Picasso.with(mContext)
                     .load(uploadCurrent.getImageurl())
+                    //.networkPolicy(NetworkPolicy.NO_CACHE)//testing with hardware acceleration in manifest
                     .placeholder(R.drawable.happy)//for place holder image(dafault image)we have used an icon for loading speed
                     .fit()
                     .centerInside()
                     .into(holder.imageView);
 
+            //for checking info
+            Picasso.with(mContext).setIndicatorsEnabled(true);
+            //testing picasso connection and performance in Logcat
+            //Picasso.with(mContext).setLoggingEnabled(true);
+
+
+
+//            Picasso.with(mContext).load(uploadCurrent.getImageurl()).placeholder(R.drawable.happy).into(holder.imageView, new Callback() {
+//                @Override
+//                public void onSuccess() {
+//                    Picasso.with(mContext).load(uploadCurrent.getImageurl()).into(new Target() {
+//                        @Override
+//                        public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
+//                            int w = bitmap.getWidth();
+//                            int h = bitmap.getHeight();
+//                            //Log.d("ComeHere ", " W : "+ width+" H : "+height);
+//
+//                            holder.imageView.getLayoutParams().height = h;
+//                            //holder.imageView.getLayoutParams().width = w ;
+//                            //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+//                        }
+//                        @Override
+//                        public void onBitmapFailed(Drawable errorDrawable) {
+//                        }
+//                        @Override
+//                        public void onPrepareLoad(Drawable placeHolderDrawable) {
+//                        }
+//                    });
+//
+//                }
+//
+//                @Override
+//                public void onError() {
+//
+//                }
+//            });
+
+
             // Attach a PhotoViewAttacher, which takes care of all of the zooming functionality.
-            PhotoViewAttacher attacher = new PhotoViewAttacher(holder.imageView);
+            //PhotoViewAttacher attacher = new PhotoViewAttacher(holder.imageView);
             //attacher.update();
-
-
-            holder.imageView.setVisibility(View.VISIBLE);
+            //holder.imageView.setVisibility(View.VISIBLE);
         }
 
     }
@@ -92,7 +145,6 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.NoticeView
             textViewTimestamp = itemView.findViewById(R.id.text_view_timestamp);
             textViewText = itemView.findViewById(R.id.text_view_text);
             imageView = itemView.findViewById(R.id.image_view);
-
 
             //for linking
             itemView.setOnClickListener(this);

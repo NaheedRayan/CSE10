@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
 
-    <ImageView
+    <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/full_routine"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

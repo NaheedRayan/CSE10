@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -17,7 +18,6 @@ import com.squareup.picasso.Picasso;
 
 import javax.annotation.Nullable;
 
-import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class FullRoutine extends AppCompatActivity {
 
@@ -63,7 +63,7 @@ public class FullRoutine extends AppCompatActivity {
                         .into(imageView);
 
                 // Attach a PhotoViewAttacher, which takes care of all of the zooming functionality.
-                PhotoViewAttacher attacher = new PhotoViewAttacher(imageView);
+                //PhotoViewAttacher attacher = new PhotoViewAttacher(imageView);
 
             }
         });

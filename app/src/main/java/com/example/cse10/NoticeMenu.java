@@ -92,7 +92,13 @@ public class NoticeMenu extends AppCompatActivity {
 
     private void settingRecyclerView() {
         mRecyclerView = findViewById(R.id.recycler_view);
-        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setHasFixedSize(false);
+
+        //some extra tweak for performance
+        mRecyclerView.setItemViewCacheSize(25);
+        mRecyclerView.setDrawingCacheEnabled(true);
+        mRecyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
+
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         //for loading progressbar
