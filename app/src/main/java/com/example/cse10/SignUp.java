@@ -84,8 +84,9 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View v) {
                 vibrator.vibrate(70);
                 Intent intent = new Intent(SignUp.this, Login.class);
-                startActivity(intent);
                 finish();
+                startActivity(intent);
+                //finish();
                 return;
             }
         });
@@ -184,8 +185,9 @@ public class SignUp extends AppCompatActivity {
 
                                         Toast.makeText(SignUp.this, "SignUp Successful", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(SignUp.this, Login.class);//calling the Login menu
-                                        startActivity(intent);
                                         finish();
+                                        startActivity(intent);
+                                        //finish();
                                         //return;
                                     } else if (flag == 0) {
                                         //if not present

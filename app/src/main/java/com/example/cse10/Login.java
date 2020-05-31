@@ -105,9 +105,10 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 vibrator.vibrate(70);
+                finish();
                 Intent intent = new Intent(Login.this, SignUp.class);
                 startActivity(intent);
-                finish();
+                //finish();
                 //return;
             }
         });
