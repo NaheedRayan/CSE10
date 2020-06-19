@@ -1,4 +1,4 @@
-package com.example.cse10;
+package com.example.cse10.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.example.cse10.R;
+import com.example.cse10.Utils;
 
 public class AboutUs extends AppCompatActivity {
 

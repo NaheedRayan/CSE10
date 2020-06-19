@@ -10,7 +10,7 @@
     android:background="@drawable/newbackground"
     android:fillViewport="true"
     android:fitsSystemWindows="true"
-    tools:context=".MainMenu"
+    tools:context=".Activities.MainMenu"
     tools:openDrawer="">
 
 
@@ -44,7 +44,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="15dp"
-                android:src="@drawable/logo">
+                android:src="@drawable/logo"
+                android:transitionName="transition2">
 
             </ImageView>
 

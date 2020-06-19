@@ -1,4 +1,4 @@
-package com.example.cse10;
+package com.example.cse10.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cse10.R;
 import com.google.android.material.textfield.TextInputLayout;
 
 

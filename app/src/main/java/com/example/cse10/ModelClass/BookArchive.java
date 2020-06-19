@@ -1,4 +1,4 @@
-package com.example.cse10;
+package com.example.cse10.ModelClass;
 
 public class BookArchive {
 

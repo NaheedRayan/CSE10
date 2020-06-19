@@ -1,4 +1,4 @@
-package com.example.cse10;
+package com.example.cse10.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.cse10.ModelClass.BookArchive;
+import com.example.cse10.R;
 
 import java.util.List;
 

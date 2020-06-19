@@ -1,35 +1,23 @@
-package com.example.cse10;
+package com.example.cse10.Adapters;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
-import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.squareup.picasso.Callback;
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.NetworkPolicy;
+import com.example.cse10.ModelClass.Notice;
+import com.example.cse10.R;
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 
-import java.net.URL;
-import java.util.Arrays;
 import java.util.List;
 
 

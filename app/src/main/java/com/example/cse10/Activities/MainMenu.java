@@ -1,6 +1,7 @@
-package com.example.cse10;
+package com.example.cse10.Activities;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -9,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +18,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.cse10.LoginActivities.Login;
+import com.example.cse10.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainMenu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -39,10 +43,15 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
     private String userId;
     private String userBatch;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+
+        //for deleting the flash during transition
+        getWindow().setEnterTransition(null);
 
         //---------------------hooks----------------
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -148,7 +157,7 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
             @Override
             public void onClick(View v) {
                 //Toast.makeText(MainMenu.this, "The feature will be available soon", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainMenu.this , CGPA_Calculator.class);
+                Intent intent = new Intent(MainMenu.this, CGPA_Calculator.class);
                 startActivity(intent);
             }
         });
@@ -171,8 +180,10 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        } else
+        } else {
+            finish();
             super.onBackPressed();
+        }
     }
 
 
@@ -205,8 +216,9 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
                 Toast.makeText(MainMenu.this, "Log Out Successful", Toast.LENGTH_SHORT).show();
 
                 Intent intent1 = new Intent(MainMenu.this, Login.class);
-                startActivity(intent1);
                 finish();
+                startActivity(intent1);
+                //finish();
 
                 break;
             case R.id.share:

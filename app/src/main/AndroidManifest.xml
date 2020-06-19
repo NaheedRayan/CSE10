@@ -12,29 +12,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:hardwareAccelerated="true">//for increasing performance
-        <activity android:name=".CGPA_Calculator"></activity>
+        android:hardwareAccelerated="true">
+        <activity android:name=".Activities.CGPA_Calculator"></activity>
         <activity
-            android:name=".Help"
-            android:parentActivityName=".MainMenu" />
+            android:name=".Activities.Help"
+            android:parentActivityName=".Activities.MainMenu" />
         <activity
-            android:name=".AddBook"
-            android:parentActivityName=".BookArchiveMenu" />
+            android:name=".Activities.AddBook"
+            android:parentActivityName=".Activities.BookArchiveMenu" />
         <activity
-            android:name=".BookArchiveMenu"
-            android:parentActivityName=".MainMenu" />
-        <activity android:name=".FullRoutine" />
-        <activity android:name=".AboutUs" />
-        <activity android:name=".ClassRoutine" />
+            android:name=".Activities.BookArchiveMenu"
+            android:parentActivityName=".Activities.MainMenu" />
+        <activity android:name=".Activities.FullRoutine" />
+        <activity android:name=".Activities.AboutUs" />
+        <activity android:name=".Activities.ClassRoutine" />
         <activity
-            android:name=".AddNotice"
+            android:name=".Activities.AddNotice"
             android:theme="@style/Theme.Transparent" />
-        <activity android:name=".NoticeMenu" />
-        <activity android:name=".Profile" />
-        <activity android:name=".MainMenu" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activities.NoticeMenu" />
+        <activity android:name=".Activities.Profile" />
+        <activity android:name=".Activities.MainMenu" />
+        <activity android:name=".LoginActivities.SignUp" />
+        <activity android:name=".LoginActivities.Login" />
+        <activity android:name=".LoginActivities.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,6 +1,5 @@
-package com.example.cse10;
+package com.example.cse10.LoginActivities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -15,16 +14,13 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
+import com.example.cse10.Activities.MainMenu;
+import com.example.cse10.R;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.ListenerRegistration;
-import com.google.firebase.firestore.Query;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import javax.annotation.Nullable;
 
@@ -193,8 +189,9 @@ public class Login extends AppCompatActivity {
                         Intent intent = new Intent(Login.this, MainMenu.class);//calling the Login menu
                         intent.putExtra("ID", userEnteredID);//also passing the item to other activity
                         intent.putExtra("BATCH", batch);//also passing the item to other activity
-                        startActivity(intent);
                         finish();
+                        startActivity(intent);
+                        //finish();
                         //return;
                     } else {
                         Toast.makeText(Login.this, "Invalid Password", Toast.LENGTH_SHORT).show();
