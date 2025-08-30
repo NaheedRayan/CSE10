@@ -62,13 +62,30 @@ CSE10 began during quarantine as a lightweight tool for our Batch-10 to check th
 
 ## Screenshots
 
-> Add your images to `assets/screenshots/` and update the paths below.
+## Screenshots
 
-| Home                                 | Routine                                    | Post                                 | Archive                                    |
-| ------------------------------------ | ------------------------------------------ | ------------------------------------ | ------------------------------------------ |
-| ![Home](assets/screenshots/home.png) | ![Routine](assets/screenshots/routine.png) | ![Post](assets/screenshots/post.png) | ![Archive](assets/screenshots/archive.png) |
+<details>
+  <summary><b>Tap to expand (10 screenshots)</b></summary>
 
----
+<table>
+<tr>
+<td><a href="assets/10.webp"><img src="assets/10.webp" width="160" alt="Screenshot 10"></a></td>
+<td><a href="assets/11.webp"><img src="assets/11.webp" width="160" alt="Screenshot 11"></a></td>
+<td><a href="assets/12.webp"><img src="assets/12.webp" width="160" alt="Screenshot 12"></a></td>
+<td><a href="assets/13.webp"><img src="assets/13.webp" width="160" alt="Screenshot 13"></a></td>
+<td><a href="assets/14.webp"><img src="assets/14.webp" width="160" alt="Screenshot 14"></a></td>
+</tr>
+<tr>
+<td><a href="assets/15.webp"><img src="assets/15.webp" width="160" alt="Screenshot 15"></a></td>
+<td><a href="assets/16.webp"><img src="assets/16.webp" width="160" alt="Screenshot 16"></a></td>
+<td><a href="assets/17.webp"><img src="assets/17.webp" width="160" alt="Screenshot 17"></a></td>
+<td><a href="assets/18.webp"><img src="assets/18.webp" width="160" alt="Screenshot 18"></a></td>
+<td><a href="assets/19.png"><img src="assets/19.png" width="160" alt="Screenshot 19"></a></td>
+</tr>
+</table>
+
+</details>
+
 
 ## Tech Stack
 
