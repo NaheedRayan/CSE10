@@ -73,7 +73,7 @@ CSE10 began during quarantine as a lightweight tool for our Batch-10 to check th
 <td><a href="assets/11.webp"><img src="assets/11.webp" width="160" alt="Screenshot 11"></a></td>
 <td><a href="assets/12.webp"><img src="assets/12.webp" width="160" alt="Screenshot 12"></a></td>
 <td><a href="assets/13.webp"><img src="assets/13.webp" width="160" alt="Screenshot 13"></a></td>
-<td><a href="assets/14.webp"><img src="assets/14.webp" width="160" alt="Screenshot 14"></a></td>
+<td><a href="assets/14.webp"><img src="assets/14.png" width="160" alt="Screenshot 14"></a></td>
 </tr>
 <tr>
 <td><a href="assets/15.webp"><img src="assets/15.webp" width="160" alt="Screenshot 15"></a></td>
